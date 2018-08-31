@@ -13,7 +13,11 @@
         @foreach (BeverageBase smak in @Model)
         {
 
-        <tr><a href='@Url.Action("Details", "Smak", new { id = @smak.Id })'>@smak.Name</a></tr>
+        <tr>
+            <td>
+                <a href="@Url.Action("Details", "Smak", new { id = @smak.Id })">@smak.Name</a>
+            </td>
+        </tr>
         }
     </table>
 

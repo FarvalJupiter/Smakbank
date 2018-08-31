@@ -5,6 +5,7 @@ using MysigSmakbank.Models.ViewModels;
 using MysigSmakbank.Repository;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MysigSmakbank.Controllers
 {
@@ -17,14 +18,14 @@ namespace MysigSmakbank.Controllers
         }
 
         // GET: Smak
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var smaker = _smakRepo.GetAllSmak();
             return View("BrowseSmak", smaker);
         }
 
         // GET: Smak/Details/5
-        public ActionResult Details(System.Guid id)
+        public async Task<IActionResult> Details(System.Guid id)
         {
             var smaker = _smakRepo.GetAllSmak();
 
@@ -32,7 +33,7 @@ namespace MysigSmakbank.Controllers
         }
 
         // GET: Smak/Create
-        public ActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View("RegisterSmak", new BeverageViewModel());
         }
@@ -40,11 +41,19 @@ namespace MysigSmakbank.Controllers
         // POST: Smak/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(BeverageViewModel collection)
+        public async Task<IActionResult> Create(BeverageViewModel collection)
         {
             try
             {
-                _smakRepo.CreateSmak(collection.Model);
+                if (collection.Model.Id == Guid.Empty)
+                {
+                    _smakRepo.CreateSmak(collection.Model);
+                }
+                else
+                {
+
+                    EditContent(collection);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -55,27 +64,19 @@ namespace MysigSmakbank.Controllers
         }
 
         // GET: Smak/Edit/5
-        public ActionResult Edit(Guid id)
+        public async Task<IActionResult> Edit(Guid id)
         {
             var smaker = _smakRepo.GetAllSmak();
             return View("RegisterSmak", new BeverageViewModel {Model= smaker.FirstOrDefault(s => s.Id == id) });
         }
 
-        // POST: Smak/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Guid id, BeverageViewModel collection)
+
+    
+        public void EditContent(BeverageViewModel collection)
         {
-            try
-            {
+          
                 _smakRepo.EditSmak(collection.Model);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return RedirectToAction("Index");
-            }
         }
     }
 }

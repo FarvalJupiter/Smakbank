@@ -9,6 +9,7 @@
 
 @using (Html.BeginForm("Create", "Smak", FormMethod.Post)) {
     
+    @Html.HiddenFor(m=>m.Model.Id)
     <div>@Html.LabelFor(m => m.Model.Type)</div>
     <select asp-for="Model.Type" asp-items="Html.GetEnumSelectList<MysigSmakbank.Models.Entities.Group>()"></select>
 
@@ -45,9 +46,18 @@
 <div>@Html.DropDownListFor(m => m.Model.SelectedPurchaseYear, Model.PurchaseYear, "Inköpsår")</div>
 
 
-    <div class="control-group">
-        <input type="submit" class="btn btn-primary" value="Registrera"/>
-    </div>
+<div class="control-group">
+    @if (Model.Model== null)
+    {
+        <input type="submit" class="btn btn-primary" value="Registrera" />
+    }
+    else
+    {
+
+        <input type="submit" class="btn btn-primary" value="Uppdatera" />
+
+    }
+</div>
 
     }
 

@@ -13,10 +13,13 @@
     <p>@Model.Name</p>
     <div>@Html.LabelFor(m => m.Type)</div>
     <p>@Model.Type</p>
+    @if(Model.Grapes!=null){
     <div>@Html.LabelFor(m => m.Grapes)</div>
+
     @foreach (var grape in Model.Grapes)
     {
-        <p>@grape</p>
+    <p>@grape</p>
+    }
     }
     <div>@Html.LabelFor(m => m.Producer)</div>
     <p>@Model.Producer</p>
@@ -35,5 +38,5 @@
     <div>@Html.LabelFor(m => m.SelectedPurchaseYear)</div>
     <p>@Model.SelectedPurchaseYear</p>
 
-    <div class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Smak", new { id=Model.Id})'">Ändra</div>
+    <div class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Smak" , new { id=Model.Id})'">Ändra</div>
 </div>

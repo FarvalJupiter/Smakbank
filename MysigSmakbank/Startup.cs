@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MysigSmakbank.Configuration;
 using MysigSmakbank.Repository;
 
 namespace MysigSmakbank
@@ -30,6 +31,8 @@ namespace MysigSmakbank
         {
             // Add framework services.
             services.AddMvc();
+            services.Configure<BlobConfiguration>(Configuration.GetSection("Blob"));
+
 
             services.AddTransient<ISmakRepo, SmakRepo>();
         }

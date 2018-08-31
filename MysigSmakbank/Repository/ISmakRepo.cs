@@ -1,6 +1,5 @@
 ﻿using MysigSmakbank.Models.Entities;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
 
 namespace MysigSmakbank.Repository
 {

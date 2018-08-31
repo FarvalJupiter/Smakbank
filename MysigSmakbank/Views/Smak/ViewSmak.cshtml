@@ -1,0 +1,39 @@
+@using MysigSmakbank.Models.Entities;
+@model BeverageBase
+
+@{
+    ViewData["Title"] = "ViewSmak";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewSmak</h2>
+
+<div>
+    <div>@Html.LabelFor(m => m.Name)</div>
+    <p>@Model.Name</p>
+    <div>@Html.LabelFor(m => m.Type)</div>
+    <p>@Model.Type</p>
+    <div>@Html.LabelFor(m => m.Grapes)</div>
+    @foreach (var grape in Model.Grapes)
+    {
+        <p>@grape</p>
+    }
+    <div>@Html.LabelFor(m => m.Producer)</div>
+    <p>@Model.Producer</p>
+    <div>@Html.LabelFor(m => m.SelectedProductionYear)</div>
+    <p>@Model.SelectedProductionYear</p>
+    <div>@Html.LabelFor(m => m.Country)</div>
+    <p>@Model.Country</p>
+    <div>@Html.LabelFor(m => m.Taste)</div>
+    <p>@Model.Taste</p>
+    <div>@Html.LabelFor(m => m.Fragrance)</div>
+    <p>@Model.Fragrance</p>
+    <div>@Html.LabelFor(m => m.OtherNotes)</div>
+    <p>@Model.OtherNotes</p>
+    <div>@Html.LabelFor(m => m.CountAtHome)</div>
+    <p>@Model.CountAtHome</p>
+    <div>@Html.LabelFor(m => m.SelectedPurchaseYear)</div>
+    <p>@Model.SelectedPurchaseYear</p>
+
+    <div class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Smak", new { id=Model.Id})'">Ändra</div>
+</div>

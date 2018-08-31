@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysigSmakbank", "MysigSmakbank\MysigSmakbank.csproj", "{5D0982EF-671D-42FE-AA1C-43A25D6E6EC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D0982EF-671D-42FE-AA1C-43A25D6E6EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0982EF-671D-42FE-AA1C-43A25D6E6EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0982EF-671D-42FE-AA1C-43A25D6E6EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0982EF-671D-42FE-AA1C-43A25D6E6EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76FC91F6-6764-45AD-AC07-72E2686988A4}
+	EndGlobalSection
+EndGlobal

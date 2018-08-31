@@ -1,0 +1,53 @@
+@model MysigSmakbank.Models.ViewModels.BeverageViewModel
+@{
+    ViewData["Title"] = "RegisterSmak";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registrera ny dryck</h2>
+
+
+@using (Html.BeginForm("Create", "Smak", FormMethod.Post)) {
+    
+    <div>@Html.LabelFor(m => m.Model.Type)</div>
+    <select asp-for="Model.Type" asp-items="Html.GetEnumSelectList<MysigSmakbank.Models.Entities.Group>()"></select>
+
+
+<div>@Html.LabelFor(m => m.Model.Grapes)</div>
+    <select asp-for="Model.Grapes" asp-items="Html.GetEnumSelectList<MysigSmakbank.Models.Entities.Grape>()"></select>
+
+
+<div>@Html.LabelFor(m => m.Model.Name)</div>
+    <div>@Html.TextBoxFor(m => m.Model.Name)</div>
+    
+<div>@Html.LabelFor(m => m.Model.Producer)</div>
+<div>@Html.TextBoxFor(m => m.Model.Producer)</div>
+    
+<div>@Html.LabelFor(m => m.ProductionYear)</div>
+<div>@Html.DropDownListFor(m => m.Model.SelectedProductionYear, Model.ProductionYear, "Produktionsår")</div>
+
+<div>@Html.LabelFor(m => m.Model.Country)</div>
+    <div>@Html.TextBoxFor(m => m.Model.Country)</div>
+
+<div>@Html.LabelFor(m => m.Model.Taste)</div>
+    <div>@Html.TextBoxFor(m => m.Model.Taste)</div>
+
+<div>@Html.LabelFor(m => m.Model.Fragrance)</div>
+    <div>@Html.TextBoxFor(m => m.Model.Fragrance)</div>
+
+<div>@Html.LabelFor(m => m.Model.OtherNotes)</div>
+    <div>@Html.TextBoxFor(m => m.Model.OtherNotes)</div>
+
+<div>@Html.LabelFor(m => m.Model.CountAtHome)</div>
+    <div>@Html.TextBoxFor(m => m.Model.CountAtHome)</div>
+
+<div>@Html.LabelFor(m => m.PurchaseYear)</div>
+<div>@Html.DropDownListFor(m => m.Model.SelectedPurchaseYear, Model.PurchaseYear, "Inköpsår")</div>
+
+
+    <div class="control-group">
+        <input type="submit" class="btn btn-primary" value="Registrera"/>
+    </div>
+
+    }
+

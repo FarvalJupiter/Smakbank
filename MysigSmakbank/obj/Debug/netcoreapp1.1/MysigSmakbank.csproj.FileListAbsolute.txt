@@ -1,0 +1,11 @@
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\bin\Debug\netcoreapp1.1\MysigSmakbank.deps.json
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\bin\Debug\netcoreapp1.1\MysigSmakbank.runtimeconfig.json
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\bin\Debug\netcoreapp1.1\MysigSmakbank.runtimeconfig.dev.json
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\bin\Debug\netcoreapp1.1\MysigSmakbank.dll
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\bin\Debug\netcoreapp1.1\MysigSmakbank.pdb
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.csproj.CoreCompileInputs.cache
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.AssemblyInfo.cs
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.dll
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.pdb
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.csprojAssemblyReference.cache
+C:\Users\KarroJonas\Source\Repos\Homework\Smakbank\MysigSmakbank\obj\Debug\netcoreapp1.1\MysigSmakbank.AssemblyInfoInputs.cache

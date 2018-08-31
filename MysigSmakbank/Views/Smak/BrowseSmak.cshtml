@@ -1,0 +1,20 @@
+@using MysigSmakbank.Models.Entities;
+@model List<BeverageBase>
+@{
+    ViewData["Title"] = "BrowseSmak";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BrowseSmak</h2>
+
+
+<div>
+    <table>
+        @foreach (BeverageBase smak in @Model)
+        {
+
+        <tr><a href='@Url.Action("Details", "Smak", new { id = @smak.Id })'>@smak.Name</a></tr>
+        }
+    </table>
+
+</div>

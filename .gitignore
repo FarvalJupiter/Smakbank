@@ -6,3 +6,4 @@
 [Oo]bj/
 [Bb]in/
 /MysigSmakbank/appsettings.Development.json
+*\.vs
